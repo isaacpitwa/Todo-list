@@ -17,6 +17,19 @@ Live preview [link](https://isaacpitwa.github.io/my-portfolio/) -->
 - Documented Work
 
 
+## Development set up
+Clone Repository  using 
+`git@github.com:isaacpitwa/Todo-list.git` 
+
+OR  using HTTPS
+
+`https://github.com/isaacpitwa/Todo-list.git` 
+
+move into project directory
+`cd conference_capstone`
+
+
+
 
 ## Authors
 

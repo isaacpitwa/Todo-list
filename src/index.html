@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <h1>Hello webpack!</h1>
+    <div class="container">
+        <div class="header">
+            <h1>Today's Do List</h1> 
+            <button type="button"><i class="fa fa-refresh"></i></button>
+        </div>
+        <input type="text" name="todo" placeholder="Add to your list...." class="add-todo" />
+        <ul class="todos" id="todos-list">
+            <li class="todo">
+                <div class="todo-content">
+                    <input type="checkbox" name="checkbox" />
+                    <p>Wash Dishes</p>
+                </div>
+                <button type="button"><i class="fa fa-ellipsis-v"></i></button>
+            </li>
+            <li class="todo">
+                <div class="todo-content">
+                    <input type="checkbox" name="checkbox" />
+                    <p>Complete Todo Project</p>
+                </div>
+                <button type="button"><i class="fa fa-ellipsis-v"></i></button>
+            </li>
+        </ul>
+        <button class="clear-btn" type="button">Clear all completed</button>
+    </div>
 </body>
+
 </html>

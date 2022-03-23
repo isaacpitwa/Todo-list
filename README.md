@@ -26,9 +26,19 @@ OR  using HTTPS
 `https://github.com/isaacpitwa/Todo-list.git` 
 
 move into project directory
-`cd conference_capstone`
+`cd Todo-list`
 
+Install  Project dependancies using `NPM`
 
+`npm install`
+
+Install  Project dependancies using   `Yarn`
+
+`yarn install`
+
+launch project locally with 
+
+`npm start` or `yarn start`
 
 
 ## Authors

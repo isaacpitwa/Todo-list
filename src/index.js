@@ -1,5 +1,7 @@
 import './style.css';
 
+const listElement = document.getElementById('todos-list');
+
 const todos = [
   {
     index: 1,
@@ -17,3 +19,16 @@ const todos = [
     completed: false,
   },
 ];
+
+window.onload = () => {
+  todos.forEach((todo) => {
+    const todoHTML = `<li class="todo">
+                          <div class="todo-content">
+                              <input type="checkbox" name="checkbox"  value=${todo.index}/>
+                              <p>${todo.description}</p>
+                          </div>
+                          <button type="button"><i class="fa fa-ellipsis-v"></i></button>
+                        </li>`;
+    listElement.insertAdjacentHTML('beforeend', todoHTML);
+  });
+};

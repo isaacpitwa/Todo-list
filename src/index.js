@@ -1,6 +1,6 @@
 import './style.css';
 import {
-  addTodo, displayTodos, getData, getIsEditing, saveEdit,
+  addTodo, displayTodos, getData, getIsEditing, saveEdit, clearCompleted,
 } from './functions.js';
 
 window.onload = () => {
@@ -15,4 +15,9 @@ desc.addEventListener('keyup', (event) => {
     if (!getIsEditing())addTodo();
     else saveEdit();
   }
+});
+
+const clearBtn = document.getElementById('clear-btn');
+clearBtn.addEventListener('click', () => {
+  clearCompleted();
 });

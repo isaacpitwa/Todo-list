@@ -15,6 +15,15 @@ const getData = () => {
     todos = formData;
   }
 };
+const toggleTodoStatus = (todo) => {
+  todos = todos.map((todo_) => {
+    if (todo_.index === todo.index) {
+      return { ...todo, completed: !todo_.completed };
+    }
+    return todo_;
+  });
+  saveData();
+};
 
 const displayTodos = () => {
   const listElement = document.getElementById('todos-list');
@@ -30,7 +39,10 @@ const displayTodos = () => {
     const checkbox = document.createElement('input');
     checkbox.setAttribute('type', 'checkbox');
     checkbox.setAttribute('name', 'checkbox');
-    checkbox.setAttribute('value', todos[i].index);
+    checkbox.checked = todos[i].completed;
+    checkbox.addEventListener('change', () => {
+      toggleTodoStatus(todos[i]);
+    });
 
     const desc = document.createElement('p');
     desc.innerText = todos[i].description;
@@ -127,6 +139,17 @@ const removeTodo = (index_) => {
 };
 
 const getIsEditing = () => isEditing;
+
+const clearCompleted = () => {
+  const completedTodos = todos.filter((todo) => todo.completed);
+  if (completedTodos.length > 0) {
+    completedTodos.forEach((todo) => {
+      removeTodo(todo.index);
+      clearCompleted();
+    });
+  }
+};
+
 export {
-  addTodo, getData, displayTodos, removeTodo, getIsEditing, saveEdit,
+  addTodo, getData, displayTodos, removeTodo, getIsEditing, saveEdit, clearCompleted,
 };

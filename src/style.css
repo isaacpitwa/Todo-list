@@ -73,7 +73,15 @@ button:hover {
   color: #dddcdd;
 }
 
-.container  .header button i {
+.container .edit-btn i {
+  color: rgb(14 185 14);
+}
+
+.container .delete-btn i {
+  color: rgb(250 6 6);
+}
+
+.container .header button i {
   color: #979797;
   font-size: 18px;
 }
@@ -84,15 +92,7 @@ button:hover {
   border: 0;
   font-family: Poppins, sans-serif;
 }
-/* .container .edit-btn ,.container .delete-btn{
-  display: none;
-} */
-.container .edit-btn i {
-  color: rgb(14, 185, 14);
-}
-.container .delete-btn i {
-  color: rgb(250, 6, 6);
-}
+
 .hidden {
   display: none;
 }

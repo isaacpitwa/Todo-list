@@ -16,12 +16,6 @@ const getData = () => {
   }
 };
 
-const showMore = (index) => {
-  // const actionsContainer = document.getElementById(`actions-${index}`);
-  // const moreBtn = document.getElementById(`more-${index}`);
-  // moreBtn.classList.add('hidden');
-};
-
 const displayTodos = () => {
   const listElement = document.getElementById('todos-list');
   listElement.innerHTML = '';
@@ -134,5 +128,5 @@ const removeTodo = (index_) => {
 
 const getIsEditing = () => isEditing;
 export {
-  addTodo, getData, displayTodos, removeTodo, showMore, getIsEditing, saveEdit,
+  addTodo, getData, displayTodos, removeTodo, getIsEditing, saveEdit,
 };

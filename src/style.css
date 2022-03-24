@@ -73,6 +73,14 @@ button:hover {
   color: #dddcdd;
 }
 
+.container .edit-btn i {
+  color: rgb(14 185 14);
+}
+
+.container .delete-btn i {
+  color: rgb(250 6 6);
+}
+
 .container .header button i {
   color: #979797;
   font-size: 18px;
@@ -83,4 +91,8 @@ button:hover {
   padding: 16px;
   border: 0;
   font-family: Poppins, sans-serif;
+}
+
+.hidden {
+  display: none;
 }

@@ -7,6 +7,12 @@ window.onload = () => {
   getData();
   displayTodos();
 };
+
+const refreshBtn = document.getElementById('refresh');
+refreshBtn.addEventListener('click', () => {
+  window.location.reload();
+});
+
 const desc = document.querySelector('#add-todo');
 desc.addEventListener('keyup', (event) => {
   // Number 13 is the "Enter" key on the keyboard

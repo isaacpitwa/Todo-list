@@ -1,21 +1,14 @@
 import {
-  addTodo, displayTodos, getData, getIsEditing, saveEdit, clearCompleted,
+  addTodo,
 } from './functions.js';
 
-describe('Add function', () => {
-  test('returns', () => {
-    expect().toBe();
-  });
-});
-
-describe('Remove function', () => {
+describe('Todo functionality Tests', () => {
   test('Add one new item to the list', () => {
-    document.body.innerHTML = `
-      <div>
-       <ul id="list"></li>
-        </div>`;
+    const listBeforeAdd = document.querySelectorAll('#todos-list li');
+    const desc = document.querySelector('#add-todo');
+    desc.value = 'Test Description';
     addTodo();
-    const list = document.querySelectorAll('#list li');
-    expect(list).toHaveLength(1);
+    const listAfterAdd = document.querySelectorAll('#todos-list li');
+    expect(listAfterAdd).toHaveLength((listBeforeAdd.length + 1));
   });
 });

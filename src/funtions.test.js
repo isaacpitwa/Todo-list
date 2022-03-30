@@ -2,10 +2,7 @@ import {
   addTodo, displayTodos, getData, getIsEditing, saveEdit, clearCompleted,
 } from './functions.js';
 
-
-
 describe('Add function', () => {
-  
   test('returns', () => {
     expect().toBe();
   });

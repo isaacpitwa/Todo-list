@@ -5,7 +5,7 @@ import {
 const toggleTodoStatus = (todot) => {
   const todos = getTodos().map((todo_) => {
     if (todo_.index === todot.index) {
-      return { ...todot, completed: !todo_.completed };
+      return { ...todot, completed: !todot.completed };
     }
     return todo_;
   });

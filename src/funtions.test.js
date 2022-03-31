@@ -67,6 +67,9 @@ describe('Edit task description functionality Tests', () => {
     const arr = JSON.parse(localStorage.todos);
     editTodo(arr[0]);
   });
+  afterAll(() => {
+    removeTodo(1);
+  });
   test('Description is not null', () => {
     expect(localStorage.todos[0].description).not.toBeNull();
   });
@@ -98,7 +101,7 @@ describe('Update item status functionality Tests', () => {
   test('Check status value after change in Local Storage', () => {
     const arr = JSON.parse(localStorage.todos);
     toggleTodoStatus(arr[0]);
-    console.log(arr[0]);
-    expect(arr[0].completed).toBe(true);
+    const arr2 = JSON.parse(localStorage.todos);
+    expect(arr2[0].completed).toBe(true);
   });
 });

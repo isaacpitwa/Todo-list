@@ -2,7 +2,12 @@ import {
   addTodo, removeTodo, editTodo,
 } from './functions.js';
 
+import saveEdit from './__mocks__/editTodo.js';
+import toggleTodoStatus from './__mocks__/toggleTodosStatus.js';
+
 const fs = require('fs');
+
+// const saveEdit = jest.fn();
 
 let listBeforeAction;
 let desc;
@@ -58,20 +63,42 @@ describe('Edit task description functionality Tests', () => {
     document.body.innerHTML = fs.readFileSync('dist/index.html');
     desc = document.getElementById('add-todo');
     desc.value = 'Test Description';
-    const descAfter = 'Change test';
     addTodo();
     const arr = JSON.parse(localStorage.todos);
     editTodo(arr[0]);
   });
-  beforeEach(() => {
-    addTodo();
-    listBeforeAction = document.querySelectorAll('#todos-list li');
-    removeTodo(1);
+  test('Description is not null', () => {
+    expect(localStorage.todos[0].description).not.toBeNull();
   });
-  test('Check description value in Local Storage', () => {
+  test('Check description value before change in Local Storage', () => {
     const arr = JSON.parse(localStorage.todos);
     expect(arr[0].description).toEqual('Test Description');
   });
-  
+  test('Check description value after change in Local Storage', () => {
+    saveEdit();
+    const arr = JSON.parse(localStorage.todos);
+    expect(arr[0].description).toEqual('Change test');
+  });
+});
 
+describe('Update item status functionality Tests', () => {
+  beforeAll(() => {
+    document.body.innerHTML = fs.readFileSync('dist/index.html');
+    desc = document.getElementById('add-todo');
+    desc.value = 'Status Test';
+    addTodo();
+  });
+  test('Status is not null', () => {
+    expect(localStorage.todos[0].completed).not.toBeNull();
+  });
+  test('Check status value before change in Local Storage', () => {
+    const arr = JSON.parse(localStorage.todos);
+    expect(arr[0].completed).toBe(false);
+  });
+  test('Check status value after change in Local Storage', () => {
+    const arr = JSON.parse(localStorage.todos);
+    toggleTodoStatus(arr[0]);
+    console.log(arr[0]);
+    expect(arr[0].completed).toBe(true);
+  });
 });

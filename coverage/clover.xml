@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1648744132432" clover="3.2.0">
-  <project timestamp="1648744132432" name="All files">
-    <metrics statements="105" coveredstatements="75" conditionals="12" coveredconditionals="2" methods="19" coveredmethods="6" elements="136" coveredelements="83" complexity="0" loc="105" ncloc="105" packages="1" files="1" classes="1"/>
+<coverage generated="1648760089213" clover="3.2.0">
+  <project timestamp="1648760089213" name="All files">
+    <metrics statements="110" coveredstatements="80" conditionals="12" coveredconditionals="2" methods="24" coveredmethods="11" elements="146" coveredelements="93" complexity="0" loc="110" ncloc="110" packages="1" files="1" classes="1"/>
     <file name="functions.js" path="/Users/jorgerios/Documents/GitHub/Todo-list-1/src/functions.js">
-      <metrics statements="105" coveredstatements="75" conditionals="12" coveredconditionals="2" methods="19" coveredmethods="6"/>
+      <metrics statements="110" coveredstatements="80" conditionals="12" coveredconditionals="2" methods="24" coveredmethods="11"/>
       <line num="3" count="1" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
       <line num="5" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
-      <line num="7" count="11" type="stmt"/>
+      <line num="7" count="13" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
       <line num="11" count="0" type="stmt"/>
       <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -97,10 +97,10 @@
       <line num="126" count="0" type="stmt"/>
       <line num="127" count="0" type="stmt"/>
       <line num="131" count="1" type="stmt"/>
-      <line num="132" count="3" type="stmt"/>
-      <line num="133" count="3" type="stmt"/>
-      <line num="135" count="2" type="stmt"/>
-      <line num="138" count="3" type="stmt"/>
+      <line num="132" count="2" type="stmt"/>
+      <line num="133" count="2" type="stmt"/>
+      <line num="135" count="1" type="stmt"/>
+      <line num="138" count="2" type="stmt"/>
       <line num="141" count="1" type="stmt"/>
       <line num="143" count="1" type="stmt"/>
       <line num="144" count="0" type="stmt"/>
@@ -108,7 +108,12 @@
       <line num="146" count="0" type="stmt"/>
       <line num="147" count="0" type="stmt"/>
       <line num="148" count="0" type="stmt"/>
-      <line num="156" count="1" type="stmt"/>
+      <line num="153" count="2" type="stmt"/>
+      <line num="155" count="2" type="stmt"/>
+      <line num="157" count="1" type="stmt"/>
+      <line num="159" count="1" type="stmt"/>
+      <line num="160" count="1" type="stmt"/>
+      <line num="167" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

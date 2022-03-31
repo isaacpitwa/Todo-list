@@ -161,6 +161,7 @@ const setEditTodo = (value) => { todoEdit = value; };
 
 export {
   addTodo, getData, displayTodos, removeTodo, getIsEditing, saveEdit, clearCompleted
-  , editTodo, getTodos, setTodos, saveData, setIsEditing, getEditTodo, setEditTodo,
+  , editTodo, getTodos, setTodos, saveData, setIsEditing, getEditTodo, setEditTodo
+  , toggleTodoStatus,
 };
 export const todo = 'todo';

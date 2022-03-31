@@ -150,7 +150,17 @@ const clearCompleted = () => {
   }
 };
 
+const getTodos = () => todos;
+
+const setTodos = (array) => { todos = array; };
+
+const setIsEditing = (value) => { isEditing = value; };
+
+const getEditTodo = () => todoEdit;
+const setEditTodo = (value) => { todoEdit = value; };
+
 export {
-  addTodo, getData, displayTodos, removeTodo, getIsEditing, saveEdit, clearCompleted,
+  addTodo, getData, displayTodos, removeTodo, getIsEditing, saveEdit, clearCompleted
+  , editTodo, getTodos, setTodos, saveData, setIsEditing, getEditTodo, setEditTodo,
 };
 export const todo = 'todo';

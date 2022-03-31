@@ -1,5 +1,5 @@
 import {
-  addTodo, removeTodo,
+  addTodo, removeTodo, editTodo,
 } from './functions.js';
 
 const fs = require('fs');
@@ -51,4 +51,27 @@ describe('Remove Todo functionality Tests', () => {
     const arr = JSON.parse(localStorage.todos);
     expect(arr).toHaveLength((listBeforeAction.length - 1));
   });
+});
+
+describe('Edit task description functionality Tests', () => {
+  beforeAll(() => {
+    document.body.innerHTML = fs.readFileSync('dist/index.html');
+    desc = document.getElementById('add-todo');
+    desc.value = 'Test Description';
+    const descAfter = 'Change test';
+    addTodo();
+    const arr = JSON.parse(localStorage.todos);
+    editTodo(arr[0]);
+  });
+  beforeEach(() => {
+    addTodo();
+    listBeforeAction = document.querySelectorAll('#todos-list li');
+    removeTodo(1);
+  });
+  test('Check description value in Local Storage', () => {
+    const arr = JSON.parse(localStorage.todos);
+    expect(arr[0].description).toEqual('Test Description');
+  });
+  
+
 });

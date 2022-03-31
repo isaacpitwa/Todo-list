@@ -153,4 +153,4 @@ const clearCompleted = () => {
 export {
   addTodo, getData, displayTodos, removeTodo, getIsEditing, saveEdit, clearCompleted,
 };
-export const todo = "todo"
+export const todo = 'todo';

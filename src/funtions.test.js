@@ -1,5 +1,5 @@
 import {
-  addTodo, removeTodo, editTodo,
+  addTodo, removeTodo, editTodo, clearCompleted,
 } from './functions.js';
 
 import saveEdit from './__mocks__/editTodo.js';
@@ -91,6 +91,9 @@ describe('Update item status functionality Tests', () => {
     desc.value = 'Status Test';
     addTodo();
   });
+  afterAll(() => {
+    removeTodo(1);
+  });
   test('Status is not null', () => {
     expect(localStorage.todos[0].completed).not.toBeNull();
   });
@@ -103,5 +106,31 @@ describe('Update item status functionality Tests', () => {
     toggleTodoStatus(arr[0]);
     const arr2 = JSON.parse(localStorage.todos);
     expect(arr2[0].completed).toBe(true);
+  });
+});
+
+describe('Clear all completed Tests', () => {
+  beforeAll(() => {
+    document.body.innerHTML = fs.readFileSync('dist/index.html');
+    desc = document.getElementById('add-todo');
+    desc.value = 'Completed Test';
+    addTodo();
+    const arr = JSON.parse(localStorage.todos);
+    toggleTodoStatus(arr[0]);
+    desc.value = 'Completed Test';
+    addTodo();
+  });
+  test('Check that Todos List  is  not null', () => {
+    expect(localStorage.todos).not.toBeNull();
+  });
+  test('Check status  of Todo is completed', () => {
+    const arr = JSON.parse(localStorage.todos);
+    expect(arr[0].completed).toBe(true);
+  });
+
+  test('Check Functionality for Clear completed Todos', () => {
+    clearCompleted();
+    const arr = JSON.parse(localStorage.todos);
+    expect(arr.length).toBe(1);
   });
 });

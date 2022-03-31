@@ -2,6 +2,7 @@ import {
   addTodo,
 } from './functions.js';
 
+
 describe('Todo functionality Tests', () => {
   test('Add one new item to the list', () => {
     const listBeforeAdd = document.querySelectorAll('#todos-list li');

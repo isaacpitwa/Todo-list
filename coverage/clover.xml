@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1648680228330" clover="3.2.0">
-  <project timestamp="1648680228330" name="All files">
-    <metrics statements="104" coveredstatements="13" conditionals="12" coveredconditionals="0" methods="19" coveredmethods="0" elements="135" coveredelements="13" complexity="0" loc="104" ncloc="104" packages="1" files="1" classes="1"/>
+<coverage generated="1648683670348" clover="3.2.0">
+  <project timestamp="1648683670348" name="All files">
+    <metrics statements="105" coveredstatements="14" conditionals="12" coveredconditionals="0" methods="19" coveredmethods="0" elements="136" coveredelements="14" complexity="0" loc="105" ncloc="105" packages="1" files="1" classes="1"/>
     <file name="functions.js" path="/Users/user/projects/microverse/Todo-list/src/functions.js">
-      <metrics statements="104" coveredstatements="13" conditionals="12" coveredconditionals="0" methods="19" coveredmethods="0"/>
+      <metrics statements="105" coveredstatements="14" conditionals="12" coveredconditionals="0" methods="19" coveredmethods="0"/>
       <line num="3" count="1" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
       <line num="5" count="1" type="stmt"/>
@@ -108,6 +108,7 @@
       <line num="146" count="0" type="stmt"/>
       <line num="147" count="0" type="stmt"/>
       <line num="148" count="0" type="stmt"/>
+      <line num="156" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

@@ -26,7 +26,7 @@ describe('Add Todo functionality Tests', () => {
   test('Storage Todos  is not null', () => {
     expect(localStorage.todos).not.toBeNull();
   });
-  test('Add one new item into Local Stroage', () => {
+  test('Add one new item into Local Storage', () => {
     const arr = JSON.parse(localStorage.todos);
     expect(arr.length).toBe((listBeforeAction.length + 1));
   });
